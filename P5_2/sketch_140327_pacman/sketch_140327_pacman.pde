@@ -12,6 +12,11 @@ void draw(){
 
 void pacman(float xPos, float yPos, float d){
   PVector pos = new PVector(xPos, yPos);
+  PVector mouseV = new PVector(mouseX, mouseY);
+  PVector pacZuMaus = PVector.sub(mouseV, pos);
+  println(pacZuMaus.heading());
+  //float pacRatation = pacZuMaus.heading();
+  
   float grad;
   // wenn abstand von Maus zu Packman < 150
   if(dist(mouseX, mouseY, xPos, yPos) < 150){
@@ -21,12 +26,12 @@ void pacman(float xPos, float yPos, float d){
     // packman statisch
     grad = 45;
   }
-  // umrechnen von grad zu bogenmass
+  
   float open = radians(grad);
   
   pushMatrix();
   translate(pos.x, pos.y);
-  rotate(mouseX/200.0);
+  rotate(pacZuMaus.heading());
   
   // body
   fill(255,255,0);

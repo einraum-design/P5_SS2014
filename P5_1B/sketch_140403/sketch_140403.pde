@@ -5,6 +5,7 @@ void setup(){
   frameRate(30);
   smooth();
   
+  // wird nur einmal zu beginn des programms gezeichnet
   fill(255, 0, 0, 30);
   ellipse(200, 300, 100, 100);
 }
@@ -28,7 +29,7 @@ void draw(){
   
   
   // ellipse an mousePosition
-  
+  // es wird immer nur ein block ausgeführt!
   if(mousePressed == true){
     fill(mouseX, mouseY, random(255));
     ellipse(mouseX, mouseY, 100, 100);

@@ -17,7 +17,7 @@ fill(229, 149, 0);
 noStroke();
 ellipse(200, 300, 300, 300); // ellipse (x_position, y_position, breite, hoehe)
 
-// zeichnet PackMan
+// zeichnet PacMan
 fill(255, 255, 0);
 stroke(0);
 arc(100, 100, 80, 80, radians(30), radians(330), PIE); // Bogen siehe http://processing.org/reference/arc_.html

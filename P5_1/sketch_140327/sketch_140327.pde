@@ -13,7 +13,7 @@ fill(0, 0, 255); // fuellfarbe rot-, gruen-, blauanteil
 stroke(255,255, 0); // konturfarbe
 rect(200, 300, 300, 200); // rechteck (x_position, y_position, breite, hoehe
 
-fill(229, 149, 0);
+fill(229, 149, 0, 100);
 noStroke();
 ellipse(200, 300, 300, 300); // ellipse (x_position, y_position, breite, hoehe)
 

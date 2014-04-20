@@ -1,5 +1,8 @@
 PacMan p;
 PacMan p2;
+PacMan pZufall;
+
+SuperPacMan supac;
 
 PacMan[] pacMenArray = new PacMan[8];
 Bullet[] bulletArray = new Bullet[50];
@@ -8,6 +11,8 @@ void setup(){
   size(800, 600);
   p = new PacMan(300, 200, 60);
   p2 = new PacMan(600, 400, 120);
+  pZufall = new PacMan();
+  supac = new SuperPacMan(400, 100, 100);
   
   // erzeugt 8 neue pacmen in einer reihe
   for(int i = 0; i< pacMenArray.length; i++){
@@ -28,6 +33,8 @@ void draw(){
   background(0);
   p.render();
   p2.render();
+  pZufall.render();
+  supac.render();
   
   for(int i = 0; i<pacMenArray.length; i++){
     pacMenArray[i].render();

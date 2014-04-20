@@ -5,7 +5,7 @@ Ball b3;
 ArrayList<Ball> ball_arrayList = new ArrayList<Ball>();
 
 void setup(){
-  size(800, 600);
+  size(800, 600, P3D);
   b1 = new Ball();
   
   PVector vec = new PVector(300, 200);
@@ -32,7 +32,7 @@ void draw(){
     b.update();
     b.render();
     
-    if(b.counter > 500){
+    if(b.counter > 2500){
       ball_arrayList.remove(b);
     }
     

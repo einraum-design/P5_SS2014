@@ -13,7 +13,7 @@ void setup() {
   frameRate(60);
   noCursor();
   
-  name = "Klaus"
+  name = "Klaus";
   println("Hello World!");
   println(name + " " + age + " größe: " + size);
   

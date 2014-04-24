@@ -22,7 +22,7 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  //background(0);
   xPos = xPos + xSpeed;
   yPos = yPos + ySpeed;
 
@@ -42,7 +42,7 @@ void draw() {
   
   ellipse(xPos, yPos, 50, 50);
   
-    text(name + " " + age + " größe: " + size, 100, 100);
+  text(name + " " + age + " größe: " + size, 100, 100);
 
 }
 

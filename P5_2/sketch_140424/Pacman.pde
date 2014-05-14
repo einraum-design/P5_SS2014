@@ -3,6 +3,7 @@ class Pacman extends PVector {
   PVector velocity;
   
   Pacman(){
+    
     x = random(width);
     y = random(height);
     
@@ -20,7 +21,7 @@ class Pacman extends PVector {
     
   }
   
-  void render() {
+  void render(PApplet p) {
     fill(255, 255, 0);
     noStroke();
     
@@ -32,7 +33,13 @@ class Pacman extends PVector {
     PVector toMouse = PVector.sub(new PVector(mouseX, mouseY), this);
     toMouse.normalize();
     println(toMouse);
-    rotate(toMouse.heading());
+    
+    // bei einfachem rotate() aufruf wird die PVector.rotate() funktion aufgerufen!
+    // weil Pacman von PVector extended ist
+    p.rotate(toMouse.heading());
+    
+    
+    //translate(x, y);
     
     float open = radians(45) - (millis() / 2000.0) % radians(45);
     arc(0, 0, size, size, open, TWO_PI - open, PIE);

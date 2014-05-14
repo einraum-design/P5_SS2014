@@ -32,7 +32,7 @@ void draw() {
       bullets_list.remove(b);
     }
   }
-  p.render();
+  p.render(this);
 
   fill(255);
   text(points, 20, 30);

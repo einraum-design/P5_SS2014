@@ -37,6 +37,7 @@ class Pacman extends PVector {
     // bei einfachem rotate() aufruf wird die PVector.rotate() funktion aufgerufen!
     // weil Pacman von PVector extended ist
     p.rotate(toMouse.heading());
+    //rotate(toMouse.heading());
     
     
     //translate(x, y);

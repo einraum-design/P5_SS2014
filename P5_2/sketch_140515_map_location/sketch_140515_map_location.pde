@@ -65,10 +65,13 @@ void runGeocodeByAddressChoreo(String address) {
   GeocodeByAddressResultSet geocodeByAddressResults = geocodeByAddressChoreo.run();
 
   // Print results
-  // println(geocodeByAddressResults.getResponse());
+  println(geocodeByAddressResults.getResponse());
   println(geocodeByAddressResults.getLatitude());
   println(geocodeByAddressResults.getLongitude());
 
   locationInput = new Location(float(geocodeByAddressResults.getLatitude()), float(geocodeByAddressResults.getLongitude()));
+
+  
+  map.panTo(locationInput);
 }
 

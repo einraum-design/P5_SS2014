@@ -11,23 +11,25 @@ void setup() {
 
 void draw() {
   background(255);
-  
 
+  if (bActive) {
+    fill(180, 180, 220);
+  }
   rect(bX, bY, bW, bH);
-  
+
   fill(0);
   text(myText, 30, 50);
 }
 
 String myText = "";
 
-void keyPressed(){
+void keyPressed() {
   println(key);
   myText = myText + key;
 }
 
 
-void mousePressed(){
+void mousePressed() {
   if (mouseX > bX && mouseX < bX + bW && mouseY > bY && mouseY < bY + bH) {
     fill(150, 150, 200);
     if (mousePressed == true) {
@@ -35,19 +37,12 @@ void mousePressed(){
       //fill(200, 200, 255);
       if (bActive == true) {
         bActive = false;
-      } 
-      else {
+      } else {
         bActive = true;
       }
     }
-  } 
-  else {
+  } else {
     fill(150);
   }
-  
-  if (bActive) {
-    fill(180, 180, 220);
-  }
-
-  
 }
+

@@ -26,12 +26,12 @@ void draw(){
   */
   // ..
   
-  stroke(0);
+  stroke(0, 0, 200);
   for(int i = 0; i<values.length; i = i + 1){
     line(60 + i*40, 0, 60 + i*40, values[i]);
   }
   
-  stroke(50);
+  stroke(200, 0, 0);
   for(int i = 0; i<randomValues.length; i = i + 1){
     line(50 + i*40, 0, 50 + i*40, randomValues[i]);
   }

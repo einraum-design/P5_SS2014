@@ -7,7 +7,7 @@ void setup(){
 void draw(){
   background(255);
   
-  float zufall = random();
+  float zufall = random(1);
   
   float ergebnis = multipliziere(3, 14);
   
@@ -42,13 +42,16 @@ void pacman(float xPos, float yPos, float angle){
 }
 
 void begruesse(){
-  text("Hello", width/2, height/2);
+  begruesse("", "Hello");
+  //text("Hello", width/2, height/2);
 }
 
 void begruesse(String name, String greeting){
-  String txt = greeting + " " + name + "!";
+  begruesse(name, greeting, width/2, height/2);
+  /*String txt = greeting + " " + name + "!";
   fill(0);
   text(txt, width/2, height/2);
+  */
 }
 
 void begruesse(String name, String greeting, int xPos, int yPos){

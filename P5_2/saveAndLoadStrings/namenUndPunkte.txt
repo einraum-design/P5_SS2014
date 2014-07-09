@@ -1,0 +1,3 @@
+Fritz,75.97024,Müller
+Dieter,55.614872,Meier
+Stephan,46.210968,Bauer
